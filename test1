@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HomeWorkHTML</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>PAINKILLER</span>
+    </div>
+    <div id="about">
+      <a href="#" title="OVERVIEW" onclick="slowScroll('#main')">WELCOME</a>
+      <a href="#" onclick="slowScroll('#overview')" title="OVERVIEW">OVERVIEW</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Contacts">Contacts</a>
+      <a href="#" onclick="slowScroll('#faq')" title="FAQ">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>PAINKILLER</h1>
+    <h3>LEARN HOW TO CODE</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>You Will Become One Of The Best Proggers Ever !</h2>
+      <span>Many Students Recommend Us</span>
+    </div>
+    <div class="text">
+      <span>We Teach How To Code On Python, C++, RUBY, JAVA, HTML, CSS, C, C#, JAVASCRIPT, PHP etc.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>OVERVIEW</h2>
+    <h4>LET'S JUMP IN TO IT</h4>
+
+    <div class="img">
+      <img src="https://enicarthagepress.tn/wp-content/uploads/2019/11/bigstock-Programming-Web-Banner-Best-P-258081862.jpg" alt="">
+      <span><a href="https://www.youtube.com/watch?v=t_ispmWmdjY">LEARN RUBY</a></span>
+    </div>
+    <div class="img">
+      <img src="https://enicarthagepress.tn/wp-content/uploads/2019/11/bigstock-Programming-Web-Banner-Best-P-258081862.jpg" alt="">
+      <span><a href="https://www.youtube.com/watch?v=rfscVS0vtbw">LEARN PYTHON</a></span>
+    </div>
+    <div class="img">
+      <img src="https://enicarthagepress.tn/wp-content/uploads/2019/11/bigstock-Programming-Web-Banner-Best-P-258081862.jpg" alt="">
+      <span><a href="https://www.youtube.com/watch?v=grEKMHGYyns">LEARN JAVA</a></span>
+    </div>
+    <div class="img">
+      <img src="https://enicarthagepress.tn/wp-content/uploads/2019/11/bigstock-Programming-Web-Banner-Best-P-258081862.jpg" alt="">
+      <span><a href="https://www.youtube.com/watch?v=vLnPwxZdW4Y">LEARN C++</a></span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Contacts</h5></center>
+    <form id="form_input">
+      <label for="name">Name <span>*</span></label><br>
+      <input type="text" placeholder="Enter Name" name="name" id="name"><br>
+      <label for="email">E-Mail <span>*</span></label><br>
+			<input type="email" placeholder="Enter E-mail" name="email" id="email"><br>
+			<label for="message">Message <span>*</span></label><br>
+			<textarea placeholder="Message" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Send</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">1. PAYMENT</span><br>
+      <span class="heading">a. How Can I Pay ?</span>
+      <p>You Can Pay With QIWI, PAYPAL, MASTERCARD, KASPI.</p>
+      <span class="heading">b. How Long Course Takes ?</span>
+      <p>6 - 12 Months.</p>
+      <span class="heading">c. Is This Course Expensive ?</span>
+      <p>We Think That Knowledge Should Be Avaible For Everyone.</p>
+    </div>
+    <div>
+      <span class="title">2. INFORMATION</span><br>
+      <span class="heading">a. You Teach Only Python, JAVA, C++ and RUBY ?</span>
+      <p>No, We Teach Other Languages, We put Those 4 Languages, Because They Are Popular Here.</p>
+      <span class="heading">b. How Many Teachers You Have ?</span>
+      <p>We Have A Lot Of Pro Teachers Who Had Worked At Google, Facebook, Yandex.</p>
+      <span class="heading">c. Where I Can Send You My CV ?</span>
+      <p>You Can Send It At FAQ section.</p>
+    </div>
+    <div>
+      <span class="title"> 3. RECOMMENDATIONS</span><br>
+      <span class="heading">a. What Books Will You Reccomend TO Learn HTML and CSS ?</span>
+      <p>HTML Tutorial by w3schools.com.</p>
+      <span class="heading">b. I want To Make Games, Do You Have GAMEDEV courses ?</span>
+      <p>Yes, We Have With An Expert Teacher Wh Worked For 10 Years.</p>
+      <span class="heading">c. Do You Have Any Sales ?</span>
+      <p>Yeah, You Can Have 1 + 1, If You Take 1st Months - 2nd Month For Free .</p>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+<link rel="tables" href="pn.html">
+</html>
